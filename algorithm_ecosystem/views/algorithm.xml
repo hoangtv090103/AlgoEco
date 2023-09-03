@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_algoeco_algorithm_form" model="ir.ui.view">
+        <field name="name">view.algoeco.algorithm.form</field>
+        <field name="model">algorithm</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="source_code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_algoeco_algorithm_tree" model="ir.ui.view">
+        <field name="name">view.algoeco.algorithm.tree</field>
+        <field name="model">algorithm</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_algoeco_algorithm" model="ir.actions.act_window">
+        <field name="name">Algorithms</field>
+        <field name="res_model">algorithm</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
