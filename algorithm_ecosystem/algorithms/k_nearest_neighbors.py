@@ -38,8 +38,7 @@ class KNearestNeighbor:
         return clf.predict(self.X_test)
 
 
-def run(path, k):
-    dataset = csv.reader(open(path, "r"), delimiter=",")
+def run(dataset, k):
     knn = KNearestNeighbor(dataset, k)
     print("Accuracy:", knn.accuracy)
     return knn.accuracy
